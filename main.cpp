@@ -60,8 +60,9 @@ int main() {
     std::deque<double> m_vals;
     auto max = std::max_element(m_vals.begin(),m_vals.end());
     for (int substr = 0; substr < m; substr++){
-        q_vec = letter_frequency(sub);
         sub = splice(ciphertext, m, substr);
+        q_vec = letter_frequency(sub);
+
 
         // sho substrinct
         std::cout << "sub = " << sub << '\n';
@@ -92,7 +93,7 @@ int main() {
     }
     
     // decipher 
-    std::cout << vigenre_dec(ciphertext, key);
+    //std::cout << vigenre_dec(ciphertext, key);
 
     return 1;
 }
